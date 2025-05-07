@@ -1,0 +1,4 @@
+flask
+validators
+flask-limiter
+mysql-connector-python
