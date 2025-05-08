@@ -44,16 +44,16 @@
 
 ### 請求資訊
 
-json
+```json
 {
   "original_url": "https://ithelp.ithome.com.tw/articles/10276184"
 }
 
----
+```
 
 ###  回應資訊(成功)
 
-json
+```json
 {
   "short_url": "http://localhost:5550/1",
   "expiration_date": "2025-06-07T13:00:00",
@@ -61,10 +61,11 @@ json
   "reason": ""
 }
 
----
+```
 
 ###  回應資訊(失敗)
 
+```
 * 缺少 original_url：
 
 json
@@ -96,8 +97,7 @@ json
   "success": false,
   "reason": "URL too long"
 }
-
----
+```
 
 ##  失敗原因
 
@@ -144,6 +144,7 @@ json
 
 ### 錯誤回應
 
+```
 * 無效短網址：
 
 json
@@ -158,7 +159,7 @@ json
 {
   "error": "Short URL expired"
 }
-
+```
 ---
 
 ##  狀態碼一覽
