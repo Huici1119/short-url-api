@@ -42,41 +42,60 @@
 
 ##  舉例
 
-### 請求資訊(成功)
+### 請求資訊
 
-| 序號 | 名稱         | 值                                             |
-| -- | ------------- |------------------------------------------------|
-| 1  | original\_url | https://ithelp.ithome.com.tw/articles/10276184 |
+json
+{
+  "original_url": "https://ithelp.ithome.com.tw/articles/10276184"
+}
 
 ---
 
 ###  回應資訊(成功)
 
-| 序號 | 名稱               | 值 |
-| -- | ---------------- | ------------------------ |
-| 1  | short_url       | http://localhost:5550/1   |
-| 2  | expiration_date | 30                        |
-| 3  | success          | True                     |
-| 4  | reason           | ""                       |
-
----
-
-### 請求資訊(失敗)
-
-| 序號 | 名稱         | 值  |
-| -- | ------------- |-----|
-| 1  | original\_url | 123 |
+json
+{
+  "short_url": "http://localhost:5550/1",
+  "expiration_date": "2025-06-07T13:00:00",
+  "success": true,
+  "reason": ""
+}
 
 ---
 
 ###  回應資訊(失敗)
 
-| 序號 | 名稱            | 值 |
-| -- | ---------------- | ------------------------ |
-| 1  | short_url       | ""  |
-| 2  | expiration_date | ""                        |
-| 3  | success          | False                     |
-| 4  | reason           | "Invalid URL format"      |
+* 缺少 original_url：
+
+json
+{
+  "short_url": "",
+  "expiration_date": "",
+  "success": false,
+  "reason": "Missing 'original_url'"
+}
+
+
+* URL 格式不正確：
+
+json
+{
+  "short_url": "",
+  "expiration_date": "",
+  "success": false,
+  "reason": "Invalid URL format"
+}
+
+
+* URL 長度超過限制：
+
+json
+{
+  "short_url": "",
+  "expiration_date": "",
+  "success": false,
+  "reason": "URL too long"
+}
 
 ---
 
@@ -121,7 +140,26 @@
 
 ---
 
+##  舉例
 
+### 錯誤回應
+
+* 無效短網址：
+
+json
+{
+  "error": "Invalid short URL"
+}
+
+
+* 已過期：
+
+json
+{
+  "error": "Short URL expired"
+}
+
+---
 
 ##  狀態碼一覽
 
