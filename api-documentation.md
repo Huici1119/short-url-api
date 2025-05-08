@@ -65,32 +65,31 @@
 
 ###  回應資訊(失敗)
 
-```
 * 缺少 original_url：
 
-json
+```json
 {
   "short_url": "",
   "expiration_date": "",
   "success": false,
   "reason": "Missing 'original_url'"
 }
-
+```
 
 * URL 格式不正確：
 
-json
+```json
 {
   "short_url": "",
   "expiration_date": "",
   "success": false,
   "reason": "Invalid URL format"
 }
-
+```
 
 * URL 長度超過限制：
 
-json
+```json
 {
   "short_url": "",
   "expiration_date": "",
@@ -144,18 +143,17 @@ json
 
 ### 錯誤回應
 
-```
 * 無效短網址：
 
-json
+```json
 {
   "error": "Invalid short URL"
 }
-
+```
 
 * 已過期：
 
-json
+```json
 {
   "error": "Short URL expired"
 }
