@@ -22,7 +22,7 @@ docker --version
 docker-compose --version
 ```
 
-### 2️ 專案結構確認
+### 2 專案結構確認
 
 ```
 shorten-url/
@@ -34,7 +34,7 @@ shorten-url/
 ├── requirements.txt
 ```
 
-### 3️ 啟動服務
+### 3 啟動服務
 
 ```bash
 # 建構並啟動 Flask + SQLite
@@ -94,6 +94,6 @@ docker-compose down
 docker-compose down -v
 ```
 
-> ⚠ SQLite 資料會儲存在容器內部，如需保留請使用 volume 映射或將 `.db` 匯出
+>  SQLite 資料會儲存在容器內部，如需保留請使用 volume 映射或將 `.db` 匯出
 
 ---
