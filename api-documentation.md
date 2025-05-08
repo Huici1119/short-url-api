@@ -88,7 +88,7 @@
 | 2  | 格式非Url | Invalid URL format | 400 |
 | 3  | 長度超過2048          | URL too long | 400 |
 
-```
+---
 
 ##  API 2：Redirect Short URL（使用短網址轉址）
 
@@ -122,8 +122,6 @@
 ---
 
 
-
----
 
 ##  狀態碼一覽
 
